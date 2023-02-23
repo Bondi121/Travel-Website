@@ -11,7 +11,7 @@ get_flashed_messages(with_categories=true) %} {% if messages %}
 <div class="contact_section layout_padding">
   <div class="container">
     <h1 class="contact_taital">Request A Call Back</h1>
-    <form method="post" action="{{ url_for('contact') }}">
+    <form method="post" action="{{ url_for('pages.contact') }}">
       <div class="email_text">
         <div class="form-group">
           <input type="text" class="email-bt" placeholder="Name" name="name" />

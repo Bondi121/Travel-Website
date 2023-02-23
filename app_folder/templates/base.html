@@ -84,27 +84,38 @@
             <div class="collapse navbar-collapse" id="navbarNav">
               <ul class="navbar-nav">
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ url_for('home') }}">Home</a>
+                  <a class="nav-link" href="{{ url_for('pages.home') }}"
+                    >Home</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ url_for('about') }}">About</a>
+                  <a class="nav-link" href="{{ url_for('pages.about') }}"
+                    >About</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ url_for('services') }}"
+                  <a class="nav-link" href="{{ url_for('pages.services') }}"
                     >Services</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ url_for('blog') }}">Blog</a>
+                  <a class="nav-link" href="{{ url_for('pages.blog') }}"
+                    >Blog</a
+                  >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ url_for('contact') }}"
+                  <a class="nav-link" href="{{ url_for('pages.contact') }}"
                     >Contact</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ url_for('register') }}"
+                  <a class="nav-link" href="{{ url_for('users.register') }}"
                     >Register</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url_for('users.login') }}"
+                    >Login</a
                   >
                 </li>
               </ul>
@@ -119,12 +130,15 @@
           </div>
           <div class="menu_main">
             <ul>
-              <li class="active"><a href="{{ url_for('home') }}">Home</a></li>
-              <li><a href="{{ url_for('about') }}">About</a></li>
-              <li><a href="{{ url_for('services') }}">Services</a></li>
-              <li><a href="{{ url_for('blog') }}">Blog</a></li>
-              <li><a href="{{ url_for('contact') }}">Contact us</a></li>
-              <li><a href="{{ url_for('register') }}">Register</a></li>
+              <li class="active">
+                <a href="{{ url_for('pages.home') }}">Home</a>
+              </li>
+              <li><a href="{{ url_for('pages.about') }}">About</a></li>
+              <li><a href="{{ url_for('pages.services') }}">Services</a></li>
+              <li><a href="{{ url_for('pages.blog') }}">Blog</a></li>
+              <li><a href="{{ url_for('pages.contact') }}">Contact us</a></li>
+              <li><a href="{{ url_for('users.register') }}">Register</a></li>
+              <li><a href="{{ url_for('users.login') }}">Login</a></li>
             </ul>
           </div>
         </div>
@@ -153,7 +167,7 @@
       <div class="footer_section layout_padding">
         <div class="container">
           <div class="input_btn_main">
-            <form action="{{ url_for('newsletter') }}" method="Post">
+            <form action="{{ url_for('pages.newsletter') }}" method="Post">
               <input
                 type="text"
                 class="mail_text"
